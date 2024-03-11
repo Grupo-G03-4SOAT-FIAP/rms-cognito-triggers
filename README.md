@@ -13,10 +13,10 @@ A set of Lambda triggers to customize Amazon Cognito authentication actions in t
 
 | Lambda Function | Quality Gate Status | Coverage |
 |---|---|---|
-| pre-signup | [badge Quality Gate aqui] | [badge Coverage aqui] |
-| define-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
-| create-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
-| verify-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
+| pre-signup | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_pre-signup&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_pre-signup) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_pre-signup&metric=coverage)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_pre-signup) |
+| define-auth-challenge | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_define-auth-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_define-auth-challenge) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_define-auth-challenge&metric=coverage)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_define-auth-challenge) |
+| create-auth-challenge | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_create-auth-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_create-auth-challenge) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_create-auth-challenge&metric=coverage)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_create-auth-challenge) |
+| verify-auth-challenge | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_verify-auth-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_verify-auth-challenge) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rms-cognito-triggers_verify-auth-challenge&metric=coverage)](https://sonarcloud.io/summary/new_code?id=rms-cognito-triggers_verify-auth-challenge) |
 
 ## Pré-requisitos
 
