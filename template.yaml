@@ -59,6 +59,22 @@ Resources:
         Sourcemap: true
         EntryPoints: 
         - app.ts
+  VerifyAuthChallengeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: verify-auth-challenge/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
@@ -82,3 +98,9 @@ Outputs:
   CreateAuthChallengeFunctionIamRole:
     Description: "Implicit IAM Role created for Create Auth Challenge function"
     Value: !GetAtt CreateAuthChallengeFunctionRole.Arn
+  VerifyAuthChallengeFunction:
+    Description: "Verify Auth Challenge Lambda Function ARN"
+    Value: !GetAtt VerifyAuthChallengeFunction.Arn
+  VerifyAuthChallengeFunctionIamRole:
+    Description: "Implicit IAM Role created for Verify Auth Challenge function"
+    Value: !GetAtt VerifyAuthChallengeFunctionRole.Arn
