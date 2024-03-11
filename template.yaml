@@ -1,0 +1,106 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  rms-cognito-triggers
+
+  Sample SAM Template for rms-cognito-triggers
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  PreSignUpFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: pre-signup/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
+  DefineAuthChallengeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: define-auth-challenge/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
+  CreateAuthChallengeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: create-auth-challenge/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
+  VerifyAuthChallengeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: verify-auth-challenge/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  PreSignUpFunction:
+    Description: "Pre Sign-up Lambda Function ARN"
+    Value: !GetAtt PreSignUpFunction.Arn
+  PreSignUpFunctionIamRole:
+    Description: "Implicit IAM Role created for Pre Sign-up function"
+    Value: !GetAtt PreSignUpFunctionRole.Arn
+  DefineAuthChallengeFunction:
+    Description: "Define Auth Challenge Lambda Function ARN"
+    Value: !GetAtt DefineAuthChallengeFunction.Arn
+  DefineAuthChallengeFunctionIamRole:
+    Description: "Implicit IAM Role created for Define Auth Challenge function"
+    Value: !GetAtt DefineAuthChallengeFunctionRole.Arn
+  CreateAuthChallengeFunction:
+    Description: "Create Auth Challenge Lambda Function ARN"
+    Value: !GetAtt CreateAuthChallengeFunction.Arn
+  CreateAuthChallengeFunctionIamRole:
+    Description: "Implicit IAM Role created for Create Auth Challenge function"
+    Value: !GetAtt CreateAuthChallengeFunctionRole.Arn
+  VerifyAuthChallengeFunction:
+    Description: "Verify Auth Challenge Lambda Function ARN"
+    Value: !GetAtt VerifyAuthChallengeFunction.Arn
+  VerifyAuthChallengeFunctionIamRole:
+    Description: "Implicit IAM Role created for Verify Auth Challenge function"
+    Value: !GetAtt VerifyAuthChallengeFunctionRole.Arn
