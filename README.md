@@ -1,7 +1,7 @@
 # rms-cognito-triggers
 A set of Lambda triggers to customize Amazon Cognito authentication actions in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff). Lambda triggers allow you to customize how you register and confirm users, authenticate users, send messages, and generate tokens.
 
-[ badge SAM Validate aqui ] [ badge SAM Deploy aqui ]
+[![SAM Validate and Build](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-validate.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-validate.yml) [![SAM Deploy](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-deploy.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-deploy.yml)
 
 ![AWS LAMBDA](https://img.shields.io/badge/AWS%20Lambda-FF9900.svg?style=for-the-badge&logo=AWS-Lambda&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
