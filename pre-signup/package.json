@@ -1,5 +1,5 @@
 {
-  "name": "hello_world",
+  "name": "pre_signup",
   "version": "1.0.0",
   "description": "hello world sample for NodeJS",
   "main": "app.js",
@@ -16,9 +16,9 @@
     "esbuild": "^0.14.14"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.92",
-    "@types/jest": "^29.2.0",
     "@jest/globals": "^29.2.0",
+    "@types/aws-lambda": "^8.10.136",
+    "@types/jest": "^29.2.0",
     "@types/node": "^20.5.7",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
