@@ -2,7 +2,7 @@ import { CreateAuthChallengeTriggerEvent } from 'aws-lambda';
 
 export const lambdaHandler = async (event: CreateAuthChallengeTriggerEvent): Promise<CreateAuthChallengeTriggerEvent> => {
     event.response.privateChallengeParameters = {};
-    event.response.privateChallengeParameters.challenge = "opensesame";
+    event.response.privateChallengeParameters.challenge = "answer";
     return event;
 };
 

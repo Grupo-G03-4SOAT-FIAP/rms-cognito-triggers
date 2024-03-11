@@ -17,9 +17,9 @@
         "email": "userpooltester@gmail.com"
       },
       "privateChallengeParameters": {
-        "challenge": "opensesame"
+        "challenge": "answer"
       },
-      "challengeAnswer": "opensesame",
+      "challengeAnswer": "answer",
       "userNotFound": false
     },
     "response": {
