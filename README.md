@@ -1,20 +1,22 @@
 # rms-cognito-triggers
 A set of Lambda triggers to customize Amazon Cognito authentication actions in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff). Lambda triggers allow you to customize how you register and confirm users, authenticate users, send messages, and generate tokens.
 
+[ badge SAM Validate aqui ] [ badge SAM Deploy aqui ]
+
 ![AWS LAMBDA](https://img.shields.io/badge/AWS%20Lambda-FF9900.svg?style=for-the-badge&logo=AWS-Lambda&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-| Lambda Function       | CI Status                                            | CD Status               |
-|-----------------------|------------------------------------------------------|-------------------------|
-| pre-signup            | [badge SonarCloud aqui]<br>[badge SAM Validate aqui] | [badge SAM Deploy aqui] |
-| define-auth-challenge | [badge SonarCloud aqui]<br>[badge SAM Validate aqui] | [badge SAM Deploy aqui] |
-| create-auth-challenge | [badge SonarCloud aqui]<br>[badge SAM Validate aqui] | [badge SAM Deploy aqui] |
-| verify-auth-challenge | [badge SonarCloud aqui]<br>[badge SAM Validate aqui] | [badge SAM Deploy aqui] |
-
 > [!TIP]
 > O Amazon Cognito trabalha com funções do AWS Lambda para modificar o comportamento da autenticação. As funções Lambda podem modificar o comportamento padrão do fluxo de autenticação, como permitir login "passwordless" sem senha por exemplo.\
 > _Para mais informações sobre os Lambda Triggers do Amazon Cognito visiste a página [Como personalizar fluxos de trabalho do grupo de usuários com acionadores do Lambda](https://docs.aws.amazon.com/pt_br/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)._
+
+| Lambda Function | Quality Gate Status | Coverage |
+|---|---|---|
+| pre-signup | [badge Quality Gate aqui] | [badge Coverage aqui] |
+| define-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
+| create-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
+| verify-auth-challenge | [badge Quality Gate aqui] | [badge Coverage aqui] |
 
 ## Pré-requisitos
 
