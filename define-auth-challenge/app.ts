@@ -8,8 +8,6 @@ export const lambdaHandler = async (event: DefineAuthChallengeTriggerEvent): Pro
 
     const session = event.request.session;
 
-    // Olá! Eu sou um comentário que não precisaria existir😞 Por favor me apagueee!!!
-
     if (session && session.length > 0 && session[session.length - 1].challengeResult) {
         // The right answer to the challenge is provided - issue tokens to user
         event.response.failAuthentication = false;
