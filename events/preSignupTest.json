@@ -1,22 +1,22 @@
 {
-    "version": "1",
-    "region": "us-east-1",
-    "userPoolId": "us-east-1_CWeZ7Rcv2",
-    "userName": "e079eebd-cc35-4ce1-8f3e-4bdf504ad923",
-    "callerContext": {
-      "awsSdkVersion": "aws-sdk-unknown-unknown",
-      "clientId": "2ni3m77vqrslh3ioif6cjoebs0"
+  "version": "1",
+  "region": "us-east-1",
+  "userPoolId": "us-east-1_CWeZ7Rcv2",
+  "userName": "00000000191",
+  "callerContext": {
+    "awsSdkVersion": "aws-sdk-unknown-unknown",
+    "clientId": "2ni3m77vqrslh3ioif6cjoebs0"
+  },
+  "triggerSource": "PreSignUp_SignUp",
+  "request": {
+    "userAttributes": {
+      "email": "userpooltester@gmail.com"
     },
-    "triggerSource": "PreSignUp_SignUp",
-    "request": {
-      "userAttributes": {
-        "email": "userpooltester@gmail.com"
-      },
-      "validationData": null
-    },
-    "response": {
-      "autoConfirmUser": false,
-      "autoVerifyEmail": false,
-      "autoVerifyPhone": false
-    }
+    "validationData": null
+  },
+  "response": {
+    "autoConfirmUser": false,
+    "autoVerifyEmail": false,
+    "autoVerifyPhone": false
   }
+}
