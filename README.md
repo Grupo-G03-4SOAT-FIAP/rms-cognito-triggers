@@ -20,7 +20,7 @@ A set of Lambda triggers to customize Amazon Cognito authentication actions in t
 
 ## Pré-requisitos
 
-Você deve ter instalado a [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), o [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) e possuir uma conta na AWS.
+Você deve ter instalado a [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), o [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html#install-sam-cli-instructions) e possuir uma conta na AWS.
 
 ## Deploy the sample application
 
