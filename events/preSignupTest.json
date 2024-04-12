@@ -1,16 +1,17 @@
 {
   "version": "1",
   "region": "us-east-1",
-  "userPoolId": "us-east-1_CWeZ7Rcv2",
-  "userName": "00000000191",
+  "userPoolId": "us-east-1_aX9fo84QN",
+  "userName": "38742612047",
   "callerContext": {
     "awsSdkVersion": "aws-sdk-unknown-unknown",
-    "clientId": "2ni3m77vqrslh3ioif6cjoebs0"
+    "clientId": "4e6phhh81h477b54ns9vfc5ahv"
   },
   "triggerSource": "PreSignUp_SignUp",
   "request": {
     "userAttributes": {
-      "email": "userpooltester@gmail.com"
+      "name": "Fulano da Silva Santos",
+      "email": "fulano@gmail.com"
     },
     "validationData": null
   },
