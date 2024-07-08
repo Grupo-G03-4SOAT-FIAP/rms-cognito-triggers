@@ -1,5 +1,5 @@
 # rms-cognito-triggers
-A set of Lambda triggers to customize Amazon Cognito authentication actions in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff). Lambda triggers allow you to customize how you register and confirm users, authenticate users, send messages, and generate tokens.
+A set of Lambda triggers to customize Amazon Cognito authentication actions in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-api-pedidos). Lambda triggers allow you to customize how you register and confirm users, authenticate users, send messages, and generate tokens.
 
 [![SAM Validate and Build](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-validate.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-validate.yml)
 [![SAM Deploy](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-deploy.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers/actions/workflows/sam-deploy.yml)
@@ -86,11 +86,14 @@ sam delete --stack-name rms-cognito-triggers
 
 ## Projetos relacionados
 
-BFF do Restaurant Management System (RMS)\
-https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff
+API de Pedidos\
+https://github.com/Grupo-G03-4SOAT-FIAP/rms-api-pedidos
+
+Infrastructure as code (IaC) com Terraform\
+https://github.com/Grupo-G03-4SOAT-FIAP/rms-iac
 
 ## Requisitos
 
-*aws-cli/2.15.10, SAM CLI, version 1.110.0* e Node.js 20.x*
+*aws-cli/2.15.10, AWS SAM CLI version 1.110.0 e Node.js 20.x*
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-cognito-triggers)
