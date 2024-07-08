@@ -1,5 +1,5 @@
 import { VerifyAuthChallengeResponseTriggerEvent } from 'aws-lambda';
-import { lambdaHandler } from '../../app';
+import { lambdaHandler } from '../../src/handlers/verify-auth-challenge';
 import { expect, describe, it } from '@jest/globals';
 
 describe('Unit test for app handler', function () {

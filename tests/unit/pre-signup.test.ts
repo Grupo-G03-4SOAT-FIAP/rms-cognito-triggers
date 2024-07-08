@@ -1,5 +1,5 @@
 import { PreSignUpTriggerEvent, Context, Callback } from 'aws-lambda';
-import { lambdaHandler } from '../../app';
+import { lambdaHandler } from '../../src/handlers/pre-signup';
 import { expect, describe, it, jest, beforeEach, afterEach } from '@jest/globals';
 
 describe('Unit test for app handler', function () {

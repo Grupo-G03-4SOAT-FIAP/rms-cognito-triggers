@@ -1,5 +1,5 @@
 import { expect, describe, it } from '@jest/globals';
-import { validate } from '../../validateCPF';
+import { validate } from '../../src/handlers/validateCPF';
 
 describe('Unit test for validate CPF', function () {
     it('verifies successful response', async () => {
