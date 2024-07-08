@@ -1,5 +1,5 @@
-import { CreateAuthChallengeTriggerEvent } from 'aws-lambda';
-import { lambdaHandler } from '../../app';
+import { DefineAuthChallengeTriggerEvent } from 'aws-lambda';
+import { lambdaHandler } from '../../src/handlers/define-auth-challenge';
 import { expect, describe, it } from '@jest/globals';
 
 describe('Unit test for app handler', function () {
@@ -13,7 +13,7 @@ describe('Unit test for app handler', function () {
                 "awsSdkVersion": "aws-sdk-unknown-unknown",
                 "clientId": "4e6phhh81h477b54ns9vfc5ahv"
             },
-            "triggerSource": "CreateAuthChallenge_Authentication",
+            "triggerSource": "DefineAuthChallenge_Authentication",
             "request": {
                 "userAttributes": {
                     "sub": "1428f428-c001-7013-6ffe-9b0100820c85",
@@ -21,17 +21,16 @@ describe('Unit test for app handler', function () {
                     "name": "Cliente Anônimo",
                     "email": "cliente@anonimo.com"
                 },
-                "challengeName": "CUSTOM_CHALLENGE",
                 "session": []
             },
             "response": {
-                "publicChallengeParameters": null,
-                "privateChallengeParameters": null,
-                "challengeMetadata": null
+                "challengeName": null,
+                "issueTokens": null,
+                "failAuthentication": null
             }
         }
 
-        const event: CreateAuthChallengeTriggerEvent = eventJson as any;
+        const event: DefineAuthChallengeTriggerEvent = eventJson as any;
 
         const responseJson = {
             "version": "1",
@@ -42,7 +41,7 @@ describe('Unit test for app handler', function () {
                 "awsSdkVersion": "aws-sdk-unknown-unknown",
                 "clientId": "4e6phhh81h477b54ns9vfc5ahv"
             },
-            "triggerSource": "CreateAuthChallenge_Authentication",
+            "triggerSource": "DefineAuthChallenge_Authentication",
             "request": {
                 "userAttributes": {
                     "sub": "1428f428-c001-7013-6ffe-9b0100820c85",
@@ -50,21 +49,18 @@ describe('Unit test for app handler', function () {
                     "name": "Cliente Anônimo",
                     "email": "cliente@anonimo.com"
                 },
-                "challengeName": "CUSTOM_CHALLENGE",
                 "session": []
             },
             "response": {
-                "publicChallengeParameters": null,
-                "privateChallengeParameters": {
-                    "challenge": "answer"
-                },
-                "challengeMetadata": null
+                "challengeName": "CUSTOM_CHALLENGE",
+                "issueTokens": false,
+                "failAuthentication": false
             }
         }
 
-        const response: CreateAuthChallengeTriggerEvent = responseJson as any;
+        const response: DefineAuthChallengeTriggerEvent = responseJson as any;
 
-        const result: CreateAuthChallengeTriggerEvent = await lambdaHandler(event);
+        const result: DefineAuthChallengeTriggerEvent = await lambdaHandler(event);
 
         expect(result).toEqual(response);
     });
